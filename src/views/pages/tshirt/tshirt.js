@@ -18,13 +18,13 @@ const Tshirt = () => {
 		setText(e.target.value)
 	}
 
-	var active = false
-	var currentX = 0
-	var currentY =0
-	var initialX =0
-	var initialY=0
-	var xOffset = 0
-	var yOffset = 0
+	let active = false
+	let currentX = 0
+	let currentY =0
+	let initialX =0
+	let initialY=0
+	let xOffset = 0
+	let yOffset = 0
 
 	const dragStart = (e) => {
 		initialX = e.clientX - xOffset
