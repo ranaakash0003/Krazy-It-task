@@ -1,5 +1,7 @@
 import React, { useRef, useState, useEffect } from 'react'
 import TshirtImage from '../../../images/tshirt.png'
+import { useCallback } from 'react'
+
 import { Button } from '@geist-ui/react'
 
 import './tshirt.scss'
@@ -26,22 +28,22 @@ const Tshirt = () => {
 	var xOffset = 0
 	var yOffset = 0
 
-	const dragStart = (e) => {
+	const dragStart = useCallback((e) => {
 		initialX = e.clientX - xOffset
 		initialY = e.clientY - yOffset
 		if (e.target === textRef.current) {
 			active = true
 		}
-	}
+	},[])
   
-	const dragEnd  = () => {
+	const dragEnd  = useCallback(() => {
 		initialX = currentX
 		initialY = currentY
   
 		active = false
-	}
+	},[])
   
-	const drag =(e) =>{
+	const drag = useCallback((e) => {
 		if (active) {
 			e.preventDefault()
 			currentX = e.clientX - initialX
@@ -52,7 +54,7 @@ const Tshirt = () => {
   
 			textRef.current.style.transform = 'translate(' + currentX + 'px, ' + currentY + 'px)'
 		}
-	}
+	},[])
 
 	const resetHandeler = () => {
 		textRef.current.innerText = ''
