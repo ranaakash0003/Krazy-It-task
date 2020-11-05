@@ -5,7 +5,6 @@ import Bd from '../../../images/bd.png'
 import Uber from '../../../images/uber.png'
 import Aws from '../../../images/aws.png'
 import Fpanda from '../../../images/fp.png'
-import Link from 'react-router-dom'
 import { Button } from '@geist-ui/react'
 import { GoDeviceDesktop, GoDeviceMobile, GoCloudDownload } from 'react-icons/go'
 import { FaNetworkWired } from 'react-icons/fa'
@@ -14,9 +13,7 @@ import { FaNetworkWired } from 'react-icons/fa'
 import './home.scss'
 
 const Home = () => {
-	const handleClient = () => {
-			
-	}
+
 	return (
 		<div className='home-container'>
 			<div className='home-wrapper'>

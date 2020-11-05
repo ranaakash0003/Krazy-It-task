@@ -64,7 +64,7 @@ const Tshirt = () => {
 		textAreaRef.current.addEventListener('mousedown', dragStart)
 		textAreaRef.current.addEventListener('mouseup', dragEnd)
 		textAreaRef.current.addEventListener('mousemove', drag)
-	}, [])
+	}, [dragStart,dragEnd, drag])
 
 	return (
 		<div>
